@@ -1,0 +1,17 @@
+name: keyring-example
+version: '0.1'
+summary: Example usage of keyrings
+description: |
+  Requires the password-manager-service introduced in snapd v2.27.
+
+grade: stable
+confinement: strict
+
+apps:
+  keyring-example:
+    command: keyring-example
+    plugs: [password-manager-service]
+
+parts:
+  keyring-example:
+    plugin: go
